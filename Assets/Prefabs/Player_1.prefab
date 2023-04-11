@@ -94,6 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4750648942702627523}
   - component: {fileID: 6186840420605897889}
+  - component: {fileID: 535581845806559606}
   m_Layer: 0
   m_Name: Player_1
   m_TagString: Untagged
@@ -124,13 +125,30 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6005098135100977667}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 175902c1936462947accad2f1669115e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   creatureName: Raeez
   creatureLvl: 5
-  creatureHp: 16
-  creatureCurrentHp: 12
-  creatureDam: 5
+  creature1CurrentHp: 17
+  creature1Dmg: 4
+  creature2CurrentHp: 20
+  creature2Dmg: 3
+--- !u!114 &535581845806559606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6005098135100977667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d32abc924ea66f4a8d2f5ee6d45ddda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  creature1Name: Raeez
+  creature1Lvl: 5
+  creature1CurrentHp: 20
+  creature1Dmg: 5

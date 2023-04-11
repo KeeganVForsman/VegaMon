@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Unit_Script : MonoBehaviour
+public class Creature1 : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -15,18 +15,16 @@ public class Unit_Script : MonoBehaviour
     {
         
     }
+    public string creature1Name;
+    public int creature1Lvl;
+    public int creature1CurrentHp;
+    public int creature1Dmg;
 
-    public string creatureName;
-    public int creatureLvl;
-    public int creature2CurrentHp;
-    public int creature2Dmg;
-
-
-    public bool DamageTookC2(int dmg)
+    public bool DamageTook(int dmg)
     {
-        creature2CurrentHp -= dmg;
+        creature1CurrentHp -= dmg;
 
-        if (creature2CurrentHp <= 0)
+        if (creature1CurrentHp <= 0)
             return true;
         else
             return false;

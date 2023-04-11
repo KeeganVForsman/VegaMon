@@ -496,7 +496,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 616023449}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1899631254}
+        m_TargetAssemblyTypeName: Battle_Manager, Assembly-CSharp
+        m_MethodName: OnAttackPlayer_1Button
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &616023449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1078,7 +1090,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1024242976}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1899631254}
+        m_TargetAssemblyTypeName: Battle_Manager, Assembly-CSharp
+        m_MethodName: OnAttackPlayer_2Button
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1024242976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1667,6 +1691,8 @@ MonoBehaviour:
   Creature_1Name: {fileID: 1857884160}
   Creature_2Name: {fileID: 241409248}
   Dialogue: {fileID: 1573971682}
+  Creature1CurrentHp: {fileID: 1957100651}
+  Creature2CurrentHp: {fileID: 1675785872}
 --- !u!4 &1899631255
 Transform:
   m_ObjectHideFlags: 0

@@ -132,5 +132,7 @@ MonoBehaviour:
   creatureName: Cameron
   creatureLvl: 5
   creatureHp: 20
-  creatureCurrentHp: 15
-  creatureDam: 4
+  creature1CurrentHp: 17
+  creature1Dmg: 4
+  creature2CurrentHp: 20
+  creature2Dmg: 3

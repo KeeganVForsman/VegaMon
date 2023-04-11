@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Unit_Script : MonoBehaviour
+public class Creature2 : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -16,8 +16,8 @@ public class Unit_Script : MonoBehaviour
         
     }
 
-    public string creatureName;
-    public int creatureLvl;
+    public string creature2Name;
+    public int creature2Lvl;
     public int creature2CurrentHp;
     public int creature2Dmg;
 
