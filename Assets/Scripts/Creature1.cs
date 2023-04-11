@@ -15,10 +15,12 @@ public class Creature1 : MonoBehaviour
     {
         
     }
+
     public string creature1Name;
     public int creature1Lvl;
     public int creature1CurrentHp;
     public int creature1Dmg;
+
 
     public bool DamageTook(int dmg)
     {

@@ -52,6 +52,7 @@ public class Battle_Manager : MonoBehaviour
         Dialogue.text = "Let the battle begin.";
 
         states = BattleStates.PLAYER_1;
+
         Player_1BattleTurn();
     }
 
@@ -76,7 +77,7 @@ public class Battle_Manager : MonoBehaviour
             return;
         else
         {
-            Player_1BattleTurn();
+            Player_2BattleTurn();
             Player_1Attack();
             Debug.Log("it works");
         }
@@ -88,7 +89,7 @@ public class Battle_Manager : MonoBehaviour
             return;
         else
         {
-            Player_2BattleTurn();
+            Player_1BattleTurn();
             Player_2Attack();
             Debug.Log("it works again");
         }
