@@ -132,10 +132,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   creatureName: Raeez
   creatureLvl: 5
-  creature1CurrentHp: 17
-  creature1Dmg: 4
   creature2CurrentHp: 20
   creature2Dmg: 3
+  creature2MaxHp: 25
 --- !u!114 &535581845806559606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,3 +151,4 @@ MonoBehaviour:
   creature1Lvl: 5
   creature1CurrentHp: 20
   creature1Dmg: 5
+  creature1MaxHp: 22

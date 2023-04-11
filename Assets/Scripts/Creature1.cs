@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Creature1 : MonoBehaviour
 {
@@ -15,11 +16,12 @@ public class Creature1 : MonoBehaviour
     {
         
     }
-
+    public Text Creature1CurrentHp;
     public string creature1Name;
     public int creature1Lvl;
     public int creature1CurrentHp;
     public int creature1Dmg;
+    public int creature1MaxHp;
 
 
     public bool DamageTook(int dmg)
@@ -30,5 +32,17 @@ public class Creature1 : MonoBehaviour
             return true;
         else
             return false;
+    }
+
+    public void Player_1Heal(int Health)
+    {
+        creature1CurrentHp += Health;
+        if (creature1CurrentHp > creature1MaxHp)
+            creature1CurrentHp = creature1MaxHp;
+    }
+
+    public void SetHp()
+    {
+        Creature1CurrentHp.text = creature1CurrentHp.ToString();
     }
 }

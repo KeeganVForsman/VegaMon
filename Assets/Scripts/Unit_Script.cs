@@ -20,6 +20,7 @@ public class Unit_Script : MonoBehaviour
     public int creatureLvl;
     public int creature2CurrentHp;
     public int creature2Dmg;
+    public int creature2MaxHp;
 
 
     public bool DamageTookC2(int dmg)
@@ -30,5 +31,12 @@ public class Unit_Script : MonoBehaviour
             return true;
         else
             return false;
+    }
+
+    public void Player_2Heal(int Health)
+    {
+        creature2CurrentHp += Health;
+        if (creature2CurrentHp > creature2MaxHp)
+            creature2CurrentHp = creature2MaxHp;
     }
 }

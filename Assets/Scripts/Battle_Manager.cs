@@ -61,17 +61,17 @@ public class Battle_Manager : MonoBehaviour
 
     }
 
-    public void Player_1BattleTurn()
+    public void Player_1BattleTurn() //Displays message of who goes next
     {
         Dialogue.text = "Its Player 1's turn.... Please choose an action.";
     }
 
-    public void Player_2BattleTurn()
+    public void Player_2BattleTurn() //Displays message of who goes next
     {
         Dialogue.text = "Its Player 2's turn.... Please choose an action.";
     }
 
-    public void OnAttackPlayer_1Button()
+    public void OnAttackPlayer_1Button() //Handels what happens if Player one presses the attack button on screen and checks if it is players turn to attack
     {
         if (states != BattleStates.PLAYER_1)
             return;
@@ -83,7 +83,7 @@ public class Battle_Manager : MonoBehaviour
         }
     }
 
-    public void OnAttackPlayer_2Button()
+    public void OnAttackPlayer_2Button() //Handels what happens if Player two presses the attack button on screen and checks if it is players turn to attack
     {
         if (states != BattleStates.PLAYER_2)
             return;
@@ -95,7 +95,7 @@ public class Battle_Manager : MonoBehaviour
         }
     }
 
-    public void Player_1Attack()
+    public void Player_1Attack() // Checks to see if the player isdead otherwise it continues with the action of attacking
     {
         bool isDead = Player_2Unit.DamageTookC2(Player_1Unit.creature1Dmg);
 
@@ -110,7 +110,7 @@ public class Battle_Manager : MonoBehaviour
         }
     }
 
-    public void Player_2Attack()
+    public void Player_2Attack() // Checks to see if the player isdead otherwise it continues with the action of attacking
     {
         bool isDead2 = Player_1Unit.DamageTook(Player_2Unit.creature2Dmg);
 
@@ -129,7 +129,7 @@ public class Battle_Manager : MonoBehaviour
     {
         if (states == BattleStates.WIN)
         {
-            Dialogue.text = "you win";
+            Dialogue.text = "you win player 1";
         }
         /* else if (states == BattleStates.LOSE)
         {
@@ -148,5 +148,32 @@ public class Battle_Manager : MonoBehaviour
             Dialogue.text = "";
         }*/
     }
+
+    public void Player_1HealthRestored()
+    {
+        if (states != BattleStates.PLAYER_1)
+            return;
+        Player_1Unit.Player_1Heal(5);
+        Dialogue.text = "Health potion used";
+
+        states = BattleStates.PLAYER_2;
+        Debug.Log("health works");
+    }
+
+    public void Player_2HealthRestored()
+    {
+        if (states != BattleStates.PLAYER_2)
+            return;
+        Player_2Unit.Player_2Heal(7);
+        Dialogue.text = "Health potion used";
+        Debug.Log("health works for me too");
+
+        states = BattleStates.PLAYER_1;
+    }
+
+   /* public void SetHp(int Hp)
+    {
+       Creature1CurrentHp = creature1CurrentHp.ToString();
+}*/
 
 }
