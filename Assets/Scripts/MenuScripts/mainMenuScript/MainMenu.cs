@@ -53,12 +53,12 @@ public class MainMenu : MonoBehaviour
 
     public void PlayStory()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(6);
     }
 
     public void ToTutorial()
     {
-        SceneManager.LoadScene(8);
+        SceneManager.LoadScene(4);
     }
 
     public void ToOptions()
