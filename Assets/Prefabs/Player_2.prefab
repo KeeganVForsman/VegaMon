@@ -131,7 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   creatureName: Cameron
   creatureLvl: 5
-  creature2CurrentHp: 20
+  creature2CurrentHp: 30
   creature2Dmg: 10
-  creature2MaxHp: 27
+  creature2MaxHp: 30
   isBlockingP2: 0

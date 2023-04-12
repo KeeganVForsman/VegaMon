@@ -151,7 +151,7 @@ MonoBehaviour:
   Creature1CurrentHp: {fileID: 0}
   creature1Name: Raeez
   creature1Lvl: 5
-  creature1CurrentHp: 20
+  creature1CurrentHp: 30
   creature1Dmg: 10
-  creature1MaxHp: 22
+  creature1MaxHp: 30
   isBlockingP1: 0

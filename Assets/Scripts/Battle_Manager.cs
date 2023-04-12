@@ -26,6 +26,8 @@ public class Battle_Manager : MonoBehaviour
 
     public int Player_1healCount = 0;
     public int Player_2healCount = 0;
+    public int Player_1SpecialUse = 0;
+    public int Player_2SpecialUse = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -137,31 +139,23 @@ public class Battle_Manager : MonoBehaviour
         }
     }
 
-    void BattleEndP1()
+    void BattleEndP1() //Displays Texts that tells the player if they won or not
     {
         if (states == BattleStates.WIN)
         {
             Dialogue.text = "you win player 1";
         }
-        /* else if (states == BattleStates.LOSE)
-        {
-            Dialogue.text = "you lose";
-        }*/
     }
 
-    void BattleEndP2()
+    void BattleEndP2()//Displays Texts that tells the player if they won or not
     {
         if (states == BattleStates.WIN)
         {
             Dialogue.text = "Player 2 won";
         }
-       /* else if (states == BattleStates.LOSE)
-        {
-            Dialogue.text = "";
-        }*/
     }
 
-    public void Player_1HealthRestored()
+    public void Player_1HealthRestored() //Used to restore health of the player and limits the amount of potions that can be used.
     {
 
         if (states != BattleStates.PLAYER_1)
@@ -182,7 +176,7 @@ public class Battle_Manager : MonoBehaviour
 
     }
 
-    public void Player_2HealthRestored()
+    public void Player_2HealthRestored()//Used to restore health of the player and limits the amount of potions that can be used.
     {
         if (states != BattleStates.PLAYER_2)
             return;
@@ -201,7 +195,7 @@ public class Battle_Manager : MonoBehaviour
         }
     }
 
-    public void Player_1Blocked()
+    public void Player_1Blocked()//Used to minus the damage that other players commit.
     {
         if (states != BattleStates.PLAYER_1)
             return;
@@ -212,7 +206,7 @@ public class Battle_Manager : MonoBehaviour
         states = BattleStates.PLAYER_2;
     }
 
-    public void Player_2Blocked()
+    public void Player_2Blocked()//Used to minus the damage that other players commit.
     {
         if (states != BattleStates.PLAYER_2)
             return;
@@ -226,5 +220,52 @@ public class Battle_Manager : MonoBehaviour
     {
        Creature1CurrentHp = creature1CurrentHp.ToString();
 }*/
+     public void Player1_Special()//Handels the specials of the players.
+    {
+        if (states != BattleStates.PLAYER_1)
+            return;
+        if(Player_1SpecialUse < 2)
+        {
+            Player_1SpecialUse++;
+            Player_2BattleTurn();
+            Player_1Attack();
+            HealthUltP1();
+            Debug.Log("its special");
+
+            states = BattleStates.PLAYER_2;
+        }
+        else
+        {
+            Dialogue.text = "No special Available.";
+        }
+    }
+
+    public void HealthUltP1() // The same as the health execpt without the restrictions
+    {
+        Player_1Unit.Player_1Heal(7);
+        Dialogue.text = "Health gained";
+        Debug.Log("health alt works");
+    }
+
+    public void Player2_Special()//Handels the specials of the players.
+    {
+
+        if (states != BattleStates.PLAYER_2)
+            return;
+        if (Player_2SpecialUse < 2)
+        {
+            Player_2SpecialUse++;
+            Player_1BattleTurn();
+            Player_2Attack();
+            Player_2Blocked();
+            Debug.Log("its so special");
+
+            states = BattleStates.PLAYER_1;
+        }
+        else
+        {
+            Dialogue.text = "No super Available.";
+        }
+    }
 
 }
