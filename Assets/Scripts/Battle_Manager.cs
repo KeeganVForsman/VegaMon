@@ -24,6 +24,9 @@ public class Battle_Manager : MonoBehaviour
     public Text Creature1CurrentHp;
     public Text Creature2CurrentHp;
 
+    public int Player_1healCount = 0;
+    public int Player_2healCount = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,14 +54,23 @@ public class Battle_Manager : MonoBehaviour
 
         Dialogue.text = "Let the battle begin.";
 
-        states = BattleStates.PLAYER_1;
+        if(RandomNumber() == 1)
+        {
+            states = BattleStates.PLAYER_1;
 
-        Player_1BattleTurn();
+            Player_1BattleTurn();
+        }
+        else
+        {
+            states = BattleStates.PLAYER_2;
+            Player_2BattleTurn();
+        }
     }
 
-    public void RandomNumber()
+    public int RandomNumber()
     {
-     
+        int New = Random.Range(1, 3);
+        return New;
     }
 
     public void Player_1BattleTurn() //Displays message of who goes next
@@ -151,24 +163,42 @@ public class Battle_Manager : MonoBehaviour
 
     public void Player_1HealthRestored()
     {
+
         if (states != BattleStates.PLAYER_1)
             return;
-        Player_1Unit.Player_1Heal(5);
-        Dialogue.text = "Health potion used";
+        if (Player_1healCount < 3)
+        {
+            Player_1healCount++;
+            Player_1Unit.Player_1Heal(5);
+            Dialogue.text = "Health potion used";
 
-        states = BattleStates.PLAYER_2;
-        Debug.Log("health works");
+            states = BattleStates.PLAYER_2;
+            Debug.Log("health works");
+        }
+        else
+        {
+            Dialogue.text = "You have no potions.";
+        }
+
     }
 
     public void Player_2HealthRestored()
     {
         if (states != BattleStates.PLAYER_2)
             return;
-        Player_2Unit.Player_2Heal(7);
-        Dialogue.text = "Health potion used";
-        Debug.Log("health works for me too");
+        if(Player_2healCount < 3)
+        {
+            Player_2healCount++;
+            Player_2Unit.Player_2Heal(7);
+            Dialogue.text = "Health potion used";
+            Debug.Log("health works for me too");
 
-        states = BattleStates.PLAYER_1;
+            states = BattleStates.PLAYER_1;
+        }
+        else
+        {
+            Dialogue.text = "You have none potions.";
+        }
     }
 
     public void Player_1Blocked()
@@ -192,13 +222,9 @@ public class Battle_Manager : MonoBehaviour
 
         states = BattleStates.PLAYER_1;
     }
-
-
    /* public void SetHp(int Hp)
     {
        Creature1CurrentHp = creature1CurrentHp.ToString();
 }*/
-
-    
 
 }

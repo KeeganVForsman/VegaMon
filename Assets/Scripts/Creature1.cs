@@ -29,7 +29,7 @@ public class Creature1 : MonoBehaviour
     {
         if (isBlockingP1 == true)
         {
-            dmg -= 3;
+            dmg -= 5;
         }
             creature1CurrentHp -= dmg;
 
