@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Creature2 : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class Creature2 : MonoBehaviour
     {
         
     }
-
+    private Text Player_2Hp;
     public string creature2Name;
     public int creature2Lvl;
     public int creature2CurrentHp;

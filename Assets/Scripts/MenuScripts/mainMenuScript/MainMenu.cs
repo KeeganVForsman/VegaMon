@@ -15,14 +15,14 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(10);
     }
 
-    public void ToPostTennis()
+    public void ToMap()
     {
-        SceneManager.LoadScene(11);
+        SceneManager.LoadScene(10);
     }
 
-    public void ToDio()
+    public void ToStats()
     {
-        SceneManager.LoadScene(13);
+        SceneManager.LoadScene(9);
     }
 
     public void ReadMe()
@@ -53,7 +53,7 @@ public class MainMenu : MonoBehaviour
 
     public void PlayStory()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(6);
     }
 
     public void ToTutorial()
@@ -87,13 +87,13 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(16);
     }
 
-    public void MeetDio()
+    public void VictoryP2()
     {
-        SceneManager.LoadScene(13);
+        SceneManager.LoadScene(8);
     }
 
-    public void MeetItchi()
+    public void VictoryP1()
     {
-        SceneManager.LoadScene(12);
+        SceneManager.LoadScene(7);
     }
 }

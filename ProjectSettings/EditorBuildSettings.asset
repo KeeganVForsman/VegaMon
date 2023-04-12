@@ -23,4 +23,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Achievements.unity
     guid: 6acd6226aa54d824ab89629e6ab69609
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/P1 Win.unity
+    guid: 28b1e617cc9c84c438a6c11bf804c618
+  - enabled: 1
+    path: Assets/Scenes/P2 Win.unity
+    guid: 5da7134f7ff0da743aa6f9fac1218522
+  - enabled: 1
+    path: Assets/Scenes/Stats Screen.unity
+    guid: 1a7919663fa8f5a4c8e849fe1b43eaad
+  - enabled: 1
+    path: Assets/Scenes/Map.unity
+    guid: 0be066c51afc95f4d880779a670eb5e6
   m_configObjects: {}

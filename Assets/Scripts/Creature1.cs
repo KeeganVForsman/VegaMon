@@ -16,6 +16,8 @@ public class Creature1 : MonoBehaviour
     {
         
     }
+    
+    public Text Player_1Hp;
     public Text Creature1CurrentHp;
     public string creature1Name;
     public int creature1Lvl;
@@ -32,6 +34,9 @@ public class Creature1 : MonoBehaviour
             dmg -= 5;
         }
             creature1CurrentHp -= dmg;
+        //SetHpP1();
+
+        //Player_1Hp.text = creature1CurrentHp.ToString();
 
             if (creature1CurrentHp <= 0)
                 return true;
@@ -50,11 +55,14 @@ public class Creature1 : MonoBehaviour
         creature1CurrentHp += Health;
         if (creature1CurrentHp > creature1MaxHp)
             creature1CurrentHp = creature1MaxHp;
+        //SetHpP1();
     }
 
-    public void SetHp()
+    public void SetHpP1()
     {
+        
         Creature1CurrentHp.text = creature1CurrentHp.ToString();
+
     }
 
     public void Blocked()

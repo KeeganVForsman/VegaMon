@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public enum BattleStates { START, PLAYER_1, PLAYER_2, WIN, LOSE, }
 
@@ -24,6 +25,16 @@ public class Battle_Manager : MonoBehaviour
     public Text Creature1CurrentHp;
     public Text Creature2CurrentHp;
 
+    Button Pl_1Attack;
+    Button Pl_1Heal;
+    Button Pl_1Block;
+    Button Pl_1Special;
+
+    Button Pl_2Special;
+    Button Pl_2Attack;
+    Button Pl_2Heal;
+    Button Pl_2Block;
+
     public int Player_1healCount = 0;
     public int Player_2healCount = 0;
     public int Player_1SpecialUse = 0;
@@ -32,6 +43,17 @@ public class Battle_Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Pl_1Attack = GetComponent<Button>();
+        Pl_1Heal = GetComponent<Button>();
+        Pl_1Block = GetComponent<Button>();
+        Pl_1Special = GetComponent<Button>();
+
+        Pl_2Special = GetComponent<Button>();
+        Pl_2Attack = GetComponent<Button>();
+        Pl_2Heal = GetComponent<Button>();
+        Pl_2Block = GetComponent<Button>();
+
+
         states = BattleStates.START;
         startBattle();
     }
@@ -39,8 +61,38 @@ public class Battle_Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
+    
+
+
+
+    public void Hide_P1_UI_Show_P2_UI()
+    {
+        Pl_1Attack.gameObject.SetActive(false);
+        Pl_1Heal.gameObject.SetActive(false);
+        Pl_1Block.gameObject.SetActive(false);
+        Pl_1Special.gameObject.SetActive(false);
+
+        Pl_1Special.gameObject.SetActive(true);
+        Pl_2Attack.gameObject.SetActive(true);
+        Pl_2Heal.gameObject.SetActive(true);
+        Pl_2Block.gameObject.SetActive(true);
+    }
+
+    public void Hide_P2_UI_Show_P1_UI()
+    {
+        Pl_1Attack.gameObject.SetActive(true);
+        Pl_1Heal.gameObject.SetActive(true);
+        Pl_1Block.gameObject.SetActive(true);
+        Pl_1Special.gameObject.SetActive(true);
+
+        Pl_1Special.gameObject.SetActive(false);
+        Pl_2Attack.gameObject.SetActive(false);
+        Pl_2Heal.gameObject.SetActive(false);
+        Pl_2Block.gameObject.SetActive(false);
+    }
+
 
     void startBattle()
     {
@@ -77,11 +129,13 @@ public class Battle_Manager : MonoBehaviour
 
     public void Player_1BattleTurn() //Displays message of who goes next
     {
+        //Hide_P2_UI_Show_P1_UI();
         Dialogue.text = "Its Player 1's turn.... Please choose an action.";
     }
 
     public void Player_2BattleTurn() //Displays message of who goes next
     {
+        //Hide_P1_UI_Show_P2_UI();
         Dialogue.text = "Its Player 2's turn.... Please choose an action.";
     }
 
@@ -127,8 +181,8 @@ public class Battle_Manager : MonoBehaviour
     public void Player_2Attack() // Checks to see if the player isdead otherwise it continues with the action of attacking
     {
         bool isDead2 = Player_1Unit.DamageTook(Player_2Unit.creature2Dmg);
-
-        if(isDead2)
+        
+        if (isDead2)
         {
             states = BattleStates.WIN;
             BattleEndP2();
@@ -143,7 +197,8 @@ public class Battle_Manager : MonoBehaviour
     {
         if (states == BattleStates.WIN)
         {
-            Dialogue.text = "you win player 1";
+            //Dialogue.text = "you win player 1";
+            SceneManager.LoadScene(7);
         }
     }
 
@@ -151,7 +206,8 @@ public class Battle_Manager : MonoBehaviour
     {
         if (states == BattleStates.WIN)
         {
-            Dialogue.text = "Player 2 won";
+            //Dialogue.text = "Player 2 won";
+            SceneManager.LoadScene(8);
         }
     }
 
