@@ -58,7 +58,7 @@ public class Battle_Manager : MonoBehaviour
 
     public void RandomNumber()
     {
-
+     
     }
 
     public void Player_1BattleTurn() //Displays message of who goes next
@@ -171,9 +171,34 @@ public class Battle_Manager : MonoBehaviour
         states = BattleStates.PLAYER_1;
     }
 
+    public void Player_1Blocked()
+    {
+        if (states != BattleStates.PLAYER_1)
+            return;
+        Player_1Unit.Blocked();
+
+        Debug.Log("Pls let this work");
+
+        states = BattleStates.PLAYER_2;
+    }
+
+    public void Player_2Blocked()
+    {
+        if (states != BattleStates.PLAYER_2)
+            return;
+        Player_2Unit.BlockedP2();
+
+        Debug.Log("This needs to work");
+
+        states = BattleStates.PLAYER_1;
+    }
+
+
    /* public void SetHp(int Hp)
     {
        Creature1CurrentHp = creature1CurrentHp.ToString();
 }*/
+
+    
 
 }

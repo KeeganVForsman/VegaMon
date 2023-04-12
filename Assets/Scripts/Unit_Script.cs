@@ -21,10 +21,16 @@ public class Unit_Script : MonoBehaviour
     public int creature2CurrentHp;
     public int creature2Dmg;
     public int creature2MaxHp;
+    public bool isBlockingP2 = false;
+
 
 
     public bool DamageTookC2(int dmg)
     {
+        if (isBlockingP2 == true)
+        {
+            dmg -= 5;
+        }
         creature2CurrentHp -= dmg;
 
         if (creature2CurrentHp <= 0)
@@ -39,4 +45,10 @@ public class Unit_Script : MonoBehaviour
         if (creature2CurrentHp > creature2MaxHp)
             creature2CurrentHp = creature2MaxHp;
     }
+    
+    public void BlockedP2()
+    {
+        isBlockingP2 = true;
+    }
+
 }

@@ -22,16 +22,27 @@ public class Creature1 : MonoBehaviour
     public int creature1CurrentHp;
     public int creature1Dmg;
     public int creature1MaxHp;
+    public bool isBlockingP1 = false;
 
 
     public bool DamageTook(int dmg)
     {
-        creature1CurrentHp -= dmg;
+        if (isBlockingP1 == true)
+        {
+            dmg -= 3;
+        }
+            creature1CurrentHp -= dmg;
+
+            if (creature1CurrentHp <= 0)
+                return true;
+            else
+                return false;
+       /* creature1CurrentHp -= dmg;
 
         if (creature1CurrentHp <= 0)
             return true;
         else
-            return false;
+            return false;*/
     }
 
     public void Player_1Heal(int Health)
@@ -45,4 +56,10 @@ public class Creature1 : MonoBehaviour
     {
         Creature1CurrentHp.text = creature1CurrentHp.ToString();
     }
+
+    public void Blocked()
+    {
+        isBlockingP1 = true;
+    }
+
 }

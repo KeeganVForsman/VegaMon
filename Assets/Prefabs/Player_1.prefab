@@ -135,6 +135,7 @@ MonoBehaviour:
   creature2CurrentHp: 20
   creature2Dmg: 3
   creature2MaxHp: 25
+  isBlockingP2: 0
 --- !u!114 &535581845806559606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,8 +148,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d32abc924ea66f4a8d2f5ee6d45ddda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Creature1CurrentHp: {fileID: 0}
   creature1Name: Raeez
   creature1Lvl: 5
   creature1CurrentHp: 20
-  creature1Dmg: 5
+  creature1Dmg: 10
   creature1MaxHp: 22
+  isBlockingP1: 0
