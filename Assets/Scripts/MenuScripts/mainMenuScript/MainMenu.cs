@@ -37,7 +37,7 @@ public class MainMenu : MonoBehaviour
 
     public void ToTutorial()
     {
-        SceneManager.LoadScene(8);
+        SceneManager.LoadScene(4);
     }
 
     public void ToOptions()
