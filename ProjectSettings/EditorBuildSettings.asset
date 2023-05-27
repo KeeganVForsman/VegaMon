@@ -41,7 +41,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PvAI.unity
     guid: b6d972dff35cc954081edc8ba9ccff5c
+  - enabled: 0
+    path: 
+    guid: 4972e7d8d38d523449bbb9840ec7ae59
   - enabled: 1
     path: Assets/Scenes/Difficulty_Select.unity
-    guid: 4972e7d8d38d523449bbb9840ec7ae59
+    guid: 0715f2b1fa6438c4f89794ecbfef4619
   m_configObjects: {}

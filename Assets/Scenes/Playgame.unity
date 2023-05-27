@@ -1724,7 +1724,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 162522951}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: PlayvsAI
+        m_MethodName: DiffSelect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
