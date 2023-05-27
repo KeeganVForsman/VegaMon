@@ -598,10 +598,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a7a9327035c2b4b85c5748b25cc8fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  states: 0
-  Player_1: {fileID: 0}
-  Ai: {fileID: 0}
-  Player_1Spawn: {fileID: 0}
+  states2: 0
+  level: 0
+  Player_1: {fileID: 6005098135100977667, guid: fd56c36f1adf2f64c9f47c1fafb37c6e, type: 3}
+  Ai: {fileID: 5531991083634088648, guid: b10423c98dffebf429201b81054a6960, type: 3}
+  selectedDifficulty: 0
+  Player_1Spawn: {fileID: 238625460}
   Ai_Spawn: {fileID: 0}
   Creature_1Name: {fileID: 0}
   Ai_Name: {fileID: 0}

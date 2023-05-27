@@ -20,6 +20,7 @@ public class AI_manager : MonoBehaviour
     Ai_creature Ai_Unit;
     Creature1 Player_1Unit;
 
+
     public Transform Player_1Spawn;
     public Transform Ai_Spawn;
 
@@ -45,24 +46,6 @@ public class AI_manager : MonoBehaviour
     public int Ai_SpecialUse = 0;
 
     // Start is called before the first frame update
-    public void OnbuttonClick()
-    {
-        string buttonName = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name;
-
-        switch (buttonName)
-        {
-            case "EasyButton":
-                selectedDifficulty = DifficultyLevel.Easy;
-                break;
-            case "MeduimButton":
-                selectedDifficulty = DifficultyLevel.Meduim;
-                break;
-            case "HardButton":
-                selectedDifficulty = DifficultyLevel.Hard;
-                break;
-        }
-        Start();
-    }
 
     void Start()
     {
@@ -100,6 +83,8 @@ public class AI_manager : MonoBehaviour
         Ai_Name.text = Ai_Unit.creatureName;
 
         Dialogue.text = "Let the battle begin.";
+
+        
 
         Who_Starts();
     }
