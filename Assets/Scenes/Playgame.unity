@@ -2251,7 +2251,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Play Story
+  m_text: Hot seat
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b31fdadb079222d41a8352571f7dd147, type: 2}
   m_sharedMaterial: {fileID: -5690521526295200380, guid: b31fdadb079222d41a8352571f7dd147, type: 2}
@@ -2414,7 +2414,7 @@ GameObject:
   - component: {fileID: 1952461726}
   - component: {fileID: 1952461725}
   m_Layer: 5
-  m_Name: PlayButton
+  m_Name: HotSeat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
