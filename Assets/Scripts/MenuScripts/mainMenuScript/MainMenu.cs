@@ -7,17 +7,17 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(11);
     }
 
     public void ToMap()
     {
-        SceneManager.LoadScene(10);
+        SceneManager.LoadScene(9);
     }
 
     public void ToStats()
     {
-        SceneManager.LoadScene(9);
+        SceneManager.LoadScene(8);
     }
 
     public void ReadMe()
@@ -27,22 +27,27 @@ public class MainMenu : MonoBehaviour
 
     public void PlayvsAI()
     {
-        SceneManager.LoadScene(11);
+        SceneManager.LoadScene(10);
+    }
+
+    public void Diffselect()
+    {
+        SceneManager.LoadScene(12);
     }
 
     public void PlayStory()
     {
-        SceneManager.LoadScene(6);
+        SceneManager.LoadScene(5);
     }
 
     public void ToTutorial()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(3);
     }
 
     public void ToOptions()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
     }
 
     public void QuitGame()
@@ -58,7 +63,7 @@ public class MainMenu : MonoBehaviour
 
     public void ToAchievements()
     {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(4);
     }
 
 
