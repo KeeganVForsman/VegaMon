@@ -25,6 +25,11 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(3);
     }
 
+    public void PlayvsAI()
+    {
+        SceneManager.LoadScene(11);
+    }
+
     public void PlayStory()
     {
         SceneManager.LoadScene(6);
