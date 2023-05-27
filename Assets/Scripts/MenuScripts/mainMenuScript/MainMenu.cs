@@ -10,11 +10,6 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
-    public void ToPostMatch3()
-    {
-        SceneManager.LoadScene(10);
-    }
-
     public void ToMap()
     {
         SceneManager.LoadScene(10);
@@ -28,27 +23,6 @@ public class MainMenu : MonoBehaviour
     public void ReadMe()
     {
         SceneManager.LoadScene(3);
-    }
-
-
-    public void PlayTennis()
-    {
-        SceneManager.LoadScene(5);
-    }
-
-    public void PlayMatch3()
-    {
-        SceneManager.LoadScene(2);
-    }
-
-    public void PlaySnake()
-    {
-        SceneManager.LoadScene(14);
-    }
-
-    public void ToPostArcade()
-    {
-        SceneManager.LoadScene(9);
     }
 
     public void PlayStory()
@@ -82,10 +56,6 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(5);
     }
 
-    public void MeetPower()
-    {
-        SceneManager.LoadScene(16);
-    }
 
     public void VictoryP2()
     {
