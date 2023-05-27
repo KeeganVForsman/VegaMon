@@ -11,6 +11,7 @@ public class Battle_Manager : MonoBehaviour
     public BattleStates states;
     public GameObject Player_1;
     public GameObject Player_2;
+ 
 
     //Unit_Script Player_1Unit;
     Unit_Script Player_2Unit;
