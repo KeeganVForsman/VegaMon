@@ -185,7 +185,7 @@ public class Battle_Manager : MonoBehaviour
         if (isDead2)
         {
             states = BattleStates.WIN;
-            BattleEndP2();
+            BattleEndAi();
         }
         else
         {
@@ -202,9 +202,9 @@ public class Battle_Manager : MonoBehaviour
         }
     }
 
-    void BattleEndP2()//Displays Texts that tells the player if they won or not
+    void BattleEndAi()//Displays Texts that tells the player if they won or not
     {
-        if (states == BattleStates.WIN)
+        if (states == BattleStates.LOSE)
         {
             //Dialogue.text = "Player 2 won";
             SceneManager.LoadScene(8);

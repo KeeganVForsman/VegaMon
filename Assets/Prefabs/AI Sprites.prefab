@@ -236,6 +236,6 @@ MonoBehaviour:
   creatureName: Alice
   creatureLvl: 3
   creature3CurrentHp: 30
-  creature3Dmg: 7
+  creature3Dmg: 30
   creature3MaxHp: 30
   isBlockingAi: 0
