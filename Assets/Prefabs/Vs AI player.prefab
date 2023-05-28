@@ -320,7 +320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player_1Hp: {fileID: 0}
   Creature1CurrentHp: {fileID: 0}
-  creature1Name: Raeez
+  creature1Name: Cameron
   creature1Lvl: 5
   creature1CurrentHp: 30
   creature1Dmg: 5

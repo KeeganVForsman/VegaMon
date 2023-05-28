@@ -39,7 +39,12 @@ public class AI_manager : MonoBehaviour
     Button Ai_Special;
     Button Ai_Attack;
     Button Ai_Heal;
-    Button Ai_Block; 
+    Button Ai_Block;
+
+    public int Creature1MaxHp = 30;
+    public int Creature3MaxHp = 30;
+    public int Creature1CurHP;
+    public int Creature3CruHp;
 
     public int Player_1healCount = 0;
     public int Ai_healCount = 0;
@@ -48,7 +53,7 @@ public class AI_manager : MonoBehaviour
 
     // Start is called before the first frame update
 
-    void Start()
+    public void Start()
     {
         Pl_1Attack = GetComponent<Button>();
         Pl_1Heal = GetComponent<Button>();
@@ -58,8 +63,10 @@ public class AI_manager : MonoBehaviour
         Ai_Special = GetComponent<Button>();
         Ai_Attack = GetComponent<Button>();
         Ai_Heal = GetComponent<Button>();
-        Ai_Block = GetComponent<Button>(); 
+        Ai_Block = GetComponent<Button>();
 
+        Creature1CurrentHp.text = Creature1MaxHp.ToString();
+        Creature3CurrentHp.text = Creature3MaxHp.ToString();
 
         states2 = BattleStates2.START;
         startBattle();

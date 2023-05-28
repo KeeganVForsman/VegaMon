@@ -611,6 +611,10 @@ MonoBehaviour:
   Creature1CurrentHp: {fileID: 1957100651}
   Creature3CurrentHp: {fileID: 1675785872}
   HpSlider: {fileID: 0}
+  Creature1MaxHp: 30
+  Creature3MaxHp: 30
+  Creature1CurHP: 0
+  Creature3CruHp: 0
   Player_1healCount: 0
   Ai_healCount: 0
   Player_1SpecialUse: 0
@@ -2970,7 +2974,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 56b1506b15d2e2b4496282ba69263ba4, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -3210,7 +3214,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 56b1506b15d2e2b4496282ba69263ba4, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
