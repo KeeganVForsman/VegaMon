@@ -178,6 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6808952734005240328}
   - component: {fileID: 5354748010449372266}
+  - component: {fileID: 4854358392108924926}
   m_Layer: 0
   m_Name: AI Sprites
   m_TagString: Untagged
@@ -209,7 +210,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5531991083634088648}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 175902c1936462947accad2f1669115e, type: 3}
   m_Name: 
@@ -220,3 +221,21 @@ MonoBehaviour:
   creature2Dmg: 15
   creature2MaxHp: 25
   isBlockingP2: 0
+--- !u!114 &4854358392108924926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5531991083634088648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a7b87fed753aa5418e460adee024e8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  creatureName: Alice
+  creatureLvl: 3
+  creature3CurrentHp: 30
+  creature3Dmg: 7
+  creature3MaxHp: 30
+  isBlockingAi: 0

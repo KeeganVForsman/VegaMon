@@ -5,8 +5,12 @@ using UnityEngine.UI;
 
 public class hpManager : MonoBehaviour
 {
-    public Image healthBar;
-    public int healthammount = 100;
+    public Text Creature_1Name;
+    public Text Ai_Name;
+    public Text Dialogue;
+    public Text Creature1CurrentHp;
+    public Text Creature3CurrentHp;
+    public Slider HpSlider;
 
     // Start is called before the first frame update
     void Start()
@@ -20,10 +24,8 @@ public class hpManager : MonoBehaviour
         
     }
 
-    public void TakeDamage(int damage)
+    public void SetHuD(Creature1 animal)
     {
-        healthammount -= damage;
-        healthBar.fillAmount = healthammount / 100;
+        
     }
-
 }

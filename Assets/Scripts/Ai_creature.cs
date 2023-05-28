@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Ai_creature : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class Ai_creature : MonoBehaviour
     public int creature3Dmg;
     public int creature3MaxHp;
     public bool isBlockingAi = false;
+
+    public Slider HpSlider;
 
 
 
