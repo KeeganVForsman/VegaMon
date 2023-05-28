@@ -103,13 +103,10 @@ public class AI_manager : MonoBehaviour
         Dialogue.text = "Its Player 1's turn.... Please choose an action.";
     }
 
-    IEnumerator Ai_BattleTurn() //Displays message of who goes next
+    public void  Ai_BattleTurn() //Displays message of who goes next
     {
-
         //Hide_P1_UI_Show_P2_UI();
         Dialogue.text = "The Ai is attacking.";
-
-        yield return new WaitForSeconds(2f);
     }
 
     public void Who_Starts()
@@ -147,15 +144,13 @@ public class AI_manager : MonoBehaviour
             return;
         else
         {
-            StartCoroutine(Ai_BattleTurn());
+            Ai_BattleTurn();
             Player_1Attack();
             Debug.Log("it works");
         }
-
-        
     }
 
-    /*public void OnAttackAi_Button() //Handels what happens if Player two presses the attack button on screen and checks if it is players turn to attack
+    public void OnAttackAi_Button() //Handels what happens if Player two presses the attack button on screen and checks if it is players turn to attack
     {
         if (states2 != BattleStates2.AI)
             return;
@@ -165,7 +160,7 @@ public class AI_manager : MonoBehaviour
             Ai_2Attack();
             Debug.Log("it works again");
         }
-    } */
+    } 
 
     public void Player_1Attack() // Checks to see if the player isdead otherwise it continues with the action of attacking
     {
@@ -179,32 +174,30 @@ public class AI_manager : MonoBehaviour
         else
         {
             states2 = BattleStates2.AI;
-            Player_1BattleTurn();
-            StartCoroutine(Ai_2Attack());
-            Debug.Log("Ai?");
+            Ai_BattleTurn();
+            OnAttackAi_Button();
+           
         }
     }
 
-    IEnumerator Ai_2Attack() // Checks to see if the player isdead otherwise it continues with the action of attacking
+    public void Ai_2Attack() // Checks to see if the player isdead otherwise it continues with the action of attacking
     {
-        yield return new WaitForSeconds(1f);
-
         bool isDead2 = Player_1Unit.DamageTook(Ai_Unit.creature3Dmg);
-
-        yield return new WaitForSeconds(1f);
 
         if (isDead2)
         {
-            states2 = BattleStates2.WIN;
-            BattleEndP2();
+            states2 = BattleStates2.LOSE;
+            BattleEndAi();
+            Debug.Log("why");
         }
         else
         {
             states2 = BattleStates2.Player1;
+            Player_1BattleTurn();
         }
     }
 
-    void BattleEndP1() //Displays Texts that tells the player if they won or not
+    public void BattleEndP1() //Displays Texts that tells the player if they won or not
     {
         if (states2 == BattleStates2.WIN)
         {
@@ -213,7 +206,7 @@ public class AI_manager : MonoBehaviour
         }
     }
 
-    void BattleEndP2()//Displays Texts that tells the player if they won or not
+    void BattleEndAi()//Displays Texts that tells the player if they won or not
     {
         if (states2 == BattleStates2.LOSE)
         {
@@ -234,6 +227,7 @@ public class AI_manager : MonoBehaviour
             Dialogue.text = "Health potion used";
 
             states2 = BattleStates2.AI;
+            Ai_Blocked();
             Debug.Log("health works");
         }
         else
@@ -259,6 +253,7 @@ public class AI_manager : MonoBehaviour
         else
         {
             Dialogue.text = "You have none potions.";
+            OnAttackAi_Button();
         }
     }
 
@@ -271,6 +266,7 @@ public class AI_manager : MonoBehaviour
         Debug.Log("Pls let this work");
 
         states2 = BattleStates2.AI;
+        Ai_HealthRestored();
     }
 
     public void Ai_Blocked()//Used to minus the damage that other players commit.
@@ -300,6 +296,7 @@ public class AI_manager : MonoBehaviour
             Debug.Log("its special");
 
             states2 = BattleStates2.AI;
+            Ai_2Special();
         }
         else
         {
@@ -332,6 +329,7 @@ public class AI_manager : MonoBehaviour
         else
         {
             Dialogue.text = "No super Available.";
+            OnAttackAi_Button();
         }
     }
 
@@ -350,14 +348,5 @@ public class AI_manager : MonoBehaviour
     public void SetHp(int hp)
     {
         HpSlider.value = hp;
-    }
-
-    void BattleEndAi() //Displays Texts that tells the player if they won or not
-    {
-        if (states2 == BattleStates2.WIN)
-        {
-            //Dialogue.text = "you win player 1";
-            SceneManager.LoadScene(7);
-        }
     }
 }

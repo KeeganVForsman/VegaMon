@@ -24,7 +24,6 @@ public class Ai_creature : MonoBehaviour
     public bool isBlockingAi = false;
 
 
-
     public bool DamageTookC3(int dmg)
     {
         if (isBlockingAi == true)
