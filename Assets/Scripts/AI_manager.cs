@@ -20,6 +20,7 @@ public class AI_manager : MonoBehaviour
     Ai_creature Ai_Unit;
     Creature1 Player_1Unit;
 
+    Difficulty_selection Difficulty_Man;
 
     public Transform Player_1Spawn;
     public Transform Ai_Spawn;
@@ -58,7 +59,9 @@ public class AI_manager : MonoBehaviour
         Ai_Special = GetComponent<Button>();
         Ai_Attack = GetComponent<Button>();
         Ai_Heal = GetComponent<Button>();
-        Ai_Block = GetComponent<Button>(); 
+        Ai_Block = GetComponent<Button>();
+
+        Difficulty_Man = GetComponent<Difficulty_selection>();
 
 
         states2 = BattleStates2.START;
@@ -79,16 +82,20 @@ public class AI_manager : MonoBehaviour
         GameObject Ai_Turn = Instantiate(Ai, Ai_Spawn);
         Ai_Unit = Ai_Turn.GetComponent<Ai_creature>();
 
+        
+
+
+
         Creature_1Name.text = Player_1Unit.creature1Name;
 
         Ai_Name.text = Ai_Unit.creatureName;
 
         Dialogue.text = "Let the battle begin.";
 
-        //Who_Starts();
-        states2 = BattleStates2.Player1;
+        Who_Starts();
+        //states2 = BattleStates2.Player1;
 
-        Player_1BattleTurn();
+        //Player_1BattleTurn();
     }
 
     public int RandomNumber()
@@ -109,8 +116,20 @@ public class AI_manager : MonoBehaviour
         Dialogue.text = "The Ai is attacking.";
     }
 
+    public void CallButtonClick()
+    {
+        if (Difficulty_Man != null)
+        {
+            Difficulty_Man.OnbuttonClick();
+        }
+    }
+
     public void Who_Starts()
     {
+        Debug.Log("Difficulty man");
+       // Debug.Log(Difficulty_Man.states2);
+
+        //CallButtonClick();
         if (selectedDifficulty == DifficultyLevel.Easy)
         {
             states2 = BattleStates2.Player1;
@@ -120,6 +139,7 @@ public class AI_manager : MonoBehaviour
         else if (selectedDifficulty == DifficultyLevel.Hard)
         {
             states2 = BattleStates2.AI;
+            
             Ai_BattleTurn();
         }
         else if(selectedDifficulty == DifficultyLevel.Meduim)

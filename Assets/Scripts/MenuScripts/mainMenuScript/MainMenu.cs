@@ -30,6 +30,11 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(11);
     }
 
+    public void DiffSelect()
+    {
+        SceneManager.LoadScene(12);
+    }
+
     public void PlayStory()
     {
         SceneManager.LoadScene(6);
