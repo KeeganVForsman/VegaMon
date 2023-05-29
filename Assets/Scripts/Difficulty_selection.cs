@@ -19,15 +19,22 @@ public class Difficulty_selection : MonoBehaviour
 
     public BattleStates2 states2;
 
-    public void OnbuttonClick()
+    public void easyModeClick()
     {
         states2 = BattleStates2.Player1;
+        bool wasClicked = true;
     }
 
-    public void OnbuttonClick3()
+    public bool OnbuttonClick3()
     {
         states2 = BattleStates2.AI;
-        Debug.Log("WHy");
+        return true;
+    }
+
+    public bool meduimModeClick()
+    {
+
+        return true;
     }
 
     // Start is called before the first frame update

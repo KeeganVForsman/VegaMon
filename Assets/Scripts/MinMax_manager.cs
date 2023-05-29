@@ -4,11 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+public class MinMax_manager : MonoBehaviour
+{
+
 public enum BattleStates2 { START, Player1, AI, WIN, LOSE, }
 public enum DifficultyLevel { Easy, Meduim, Hard, }
 
-public class AI_manager : MonoBehaviour
-{
     public BattleStates2 states2;
     public DifficultyLevel level;
     public GameObject Player_1;
@@ -40,7 +41,7 @@ public class AI_manager : MonoBehaviour
     Button Ai_Special;
     Button Ai_Attack;
     Button Ai_Heal;
-    Button Ai_Block; 
+    Button Ai_Block;
 
     public int Player_1healCount = 0;
     public int Ai_healCount = 0;
@@ -71,7 +72,7 @@ public class AI_manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void startBattle()
@@ -107,7 +108,7 @@ public class AI_manager : MonoBehaviour
         Dialogue.text = "Its Player 1's turn.... Please choose an action.";
     }
 
-    public void  Ai_BattleTurn() //Displays message of who goes next
+    public void Ai_BattleTurn() //Displays message of who goes next
     {
         //Hide_P1_UI_Show_P2_UI();
         Dialogue.text = "The Ai is attacking.";
@@ -132,14 +133,14 @@ public class AI_manager : MonoBehaviour
             states2 = BattleStates2.Player1;
             Player_1BattleTurn();
         }
-       
+
         else if (selectedDifficulty == DifficultyLevel.Hard)
         {
             states2 = BattleStates2.AI;
-            
+
             Ai_BattleTurn();
         }
-        else if(selectedDifficulty == DifficultyLevel.Meduim)
+        else if (selectedDifficulty == DifficultyLevel.Meduim)
         {
             if (RandomNumber() == 1)
             {
@@ -177,7 +178,7 @@ public class AI_manager : MonoBehaviour
             Ai_2Attack();
             Debug.Log("it works again");
         }
-    } 
+    }
 
     public void Player_1Attack() // Checks to see if the player isdead otherwise it continues with the action of attacking
     {
@@ -193,7 +194,7 @@ public class AI_manager : MonoBehaviour
             states2 = BattleStates2.AI;
             Ai_BattleTurn();
             OnAttackAi_Button();
-           
+
         }
     }
 
@@ -367,3 +368,4 @@ public class AI_manager : MonoBehaviour
         HpSlider.value = hp;
     }
 }
+
