@@ -41,7 +41,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PvAI.unity
     guid: b6d972dff35cc954081edc8ba9ccff5c
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/PvAI hard.unity
+    guid: 245c00eff094fd149bfbe3ef6688ec6b
+  - enabled: 1
+    path: Assets/Scenes/PvAI Meduim 1.unity
+    guid: f58b38f7a00955a47b4b4dc547530027
+  - enabled: 1
+    path: Assets/Scenes/P1 Win Ai.unity
+    guid: 5c5979911e161f741b79e86d0d0fa7cc
   - enabled: 1
     path: Assets/Scenes/Difficulty_Select.unity
-    guid: 4972e7d8d38d523449bbb9840ec7ae59
+    guid: 0715f2b1fa6438c4f89794ecbfef4619
   m_configObjects: {}

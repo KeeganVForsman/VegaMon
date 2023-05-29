@@ -25,14 +25,24 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(3);
     }
 
-    public void PlayvsAI()
+    public void PlayvsAIEasy()
     {
         SceneManager.LoadScene(11);
     }
 
-    public void DiffSelect()
+    public void PlayvsAiHard()
     {
         SceneManager.LoadScene(12);
+    }
+
+    public void PlayvsMeduim()
+    {
+        SceneManager.LoadScene(13);
+    }
+
+    public void DiffSelect()
+    {
+        SceneManager.LoadScene(15);
     }
 
     public void PlayStory()
@@ -76,4 +86,6 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(7);
     }
+
+
 }
