@@ -232,7 +232,7 @@ public class Meduim_Ai_Manager : MonoBehaviour
         if (states2 == BattleStates2.WIN)
         {
             //Dialogue.text = "you win player 1";
-            SceneManager.LoadScene(7);
+            SceneManager.LoadScene(14);
         }
     }
 
@@ -241,7 +241,7 @@ public class Meduim_Ai_Manager : MonoBehaviour
         if (states2 == BattleStates2.LOSE)
         {
             //Dialogue.text = "Player 2 won";
-            SceneManager.LoadScene(8);
+            SceneManager.LoadScene(16);
         }
     }
 
