@@ -87,5 +87,10 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(7);
     }
 
+    public void Adventure()
+    {
+        SceneManager.LoadScene(17);
+    }
+
 
 }
