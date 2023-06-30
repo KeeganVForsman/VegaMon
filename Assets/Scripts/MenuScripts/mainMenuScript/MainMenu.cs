@@ -92,5 +92,9 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(17);
     }
 
+    public void Ai_selection()
+    {
+        SceneManager.LoadScene(18);
+    }
 
 }

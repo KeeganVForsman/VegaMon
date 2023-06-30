@@ -50,12 +50,14 @@ public class Creature1 : MonoBehaviour
             return false;*/
     }
 
-    public void Player_1Heal(int Health)
+    public int Player_1Heal(int Health)
     {
         creature1CurrentHp += Health;
         if (creature1CurrentHp > creature1MaxHp)
             creature1CurrentHp = creature1MaxHp;
         //SetHpP1();
+
+        return creature1CurrentHp;
     }
 
     public void SetHpP1()
