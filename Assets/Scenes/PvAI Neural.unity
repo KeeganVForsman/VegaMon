@@ -580,6 +580,7 @@ GameObject:
   - component: {fileID: 459278804}
   - component: {fileID: 459278803}
   - component: {fileID: 459278805}
+  - component: {fileID: 459278806}
   m_Layer: 0
   m_Name: Ai_manager
   m_TagString: Untagged
@@ -644,6 +645,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   networkShape: 03000000050000000500000004000000
+--- !u!114 &459278806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459278802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9599011e9cbc93b43871279f1b939edd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  states2: 0
+  Ai_Animal: {fileID: 4854358392108924926, guid: b10423c98dffebf429201b81054a6960, type: 3}
+  Animal: {fileID: 535581845806559606, guid: fd56c36f1adf2f64c9f47c1fafb37c6e, type: 3}
+  neuralNetwork: {fileID: 459278805}
 --- !u!1 &608176117
 GameObject:
   m_ObjectHideFlags: 0
