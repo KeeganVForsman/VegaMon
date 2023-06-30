@@ -97,4 +97,24 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(18);
     }
 
+    public void NN_AI_EZ()
+    {
+        SceneManager.LoadScene(19);
+    }
+
+    public void NN_Selection()
+    {
+        SceneManager.LoadScene(20);
+    }
+
+    public void NN_AI_Meduim()
+    {
+        SceneManager.LoadScene(21);
+    }
+
+    public void NN_AI_hard()
+    {
+        SceneManager.LoadScene(22);
+    }
+
 }

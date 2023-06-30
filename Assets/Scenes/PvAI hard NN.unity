@@ -308,7 +308,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &241409246
 GameObject:
@@ -419,7 +419,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &438724663
 GameObject:
@@ -569,81 +569,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 444354919}
   m_CullTransparentMesh: 1
---- !u!1 &459278802
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 459278804}
-  - component: {fileID: 459278803}
-  - component: {fileID: 459278805}
-  m_Layer: 0
-  m_Name: Ai_manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &459278803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 459278802}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70a7a9327035c2b4b85c5748b25cc8fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  states2: 1
-  level: 0
-  Player_1: {fileID: 6005098135100977667, guid: fd56c36f1adf2f64c9f47c1fafb37c6e, type: 3}
-  Ai: {fileID: 5531991083634088648, guid: b10423c98dffebf429201b81054a6960, type: 3}
-  selectedDifficulty: 0
-  Player_1Spawn: {fileID: 238625460}
-  Ai_Spawn: {fileID: 333259641}
-  Creature_1Name: {fileID: 1857884160}
-  Ai_Name: {fileID: 241409248}
-  Dialogue: {fileID: 1573971682}
-  Creature1CurrentHp: {fileID: 1957100651}
-  Creature3CurrentHp: {fileID: 1675785872}
-  HpSlider: {fileID: 0}
-  Player_1healCount: 0
-  Ai_healCount: 0
-  Player_1SpecialUse: 0
-  Ai_SpecialUse: 0
---- !u!4 &459278804
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 459278802}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 503.30078, y: 247.2683, z: -2.2568278}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &459278805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 459278802}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75154350b55c735408b83bd7ecaef5dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  networkShape: 03000000050000000500000004000000
 --- !u!1 &608176117
 GameObject:
   m_ObjectHideFlags: 0
@@ -728,8 +653,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 459278803}
-        m_TargetAssemblyTypeName: AI_manager, Assembly-CSharp
+      - m_Target: {fileID: 744083601}
+        m_TargetAssemblyTypeName: Hard_AI, Assembly-CSharp
         m_MethodName: Player1_Special
         m_Mode: 1
         m_Arguments:
@@ -862,8 +787,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 459278803}
-        m_TargetAssemblyTypeName: AI_manager, Assembly-CSharp
+      - m_Target: {fileID: 744083601}
+        m_TargetAssemblyTypeName: Hard_AI, Assembly-CSharp
         m_MethodName: OnAttackPlayer_1Button
         m_Mode: 1
         m_Arguments:
@@ -1246,8 +1171,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 459278803}
-        m_TargetAssemblyTypeName: AI_manager, Assembly-CSharp
+      - m_Target: {fileID: 744083601}
+        m_TargetAssemblyTypeName: Hard_AI, Assembly-CSharp
         m_MethodName: Player_1HealthRestored
         m_Mode: 1
         m_Arguments:
@@ -1376,6 +1301,98 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 735715036}
   m_CullTransparentMesh: 1
+--- !u!1 &744083600
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 744083602}
+  - component: {fileID: 744083601}
+  - component: {fileID: 744083603}
+  - component: {fileID: 744083604}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &744083601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744083600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25dd53f7676eb704ea7b65d0b664bd6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  states3: 0
+  level: 2
+  Player_1: {fileID: 6005098135100977667, guid: fd56c36f1adf2f64c9f47c1fafb37c6e, type: 3}
+  Ai: {fileID: 5531991083634088648, guid: b10423c98dffebf429201b81054a6960, type: 3}
+  selectedDifficulty: 2
+  Player_1Spawn: {fileID: 238625460}
+  Ai_Spawn: {fileID: 333259641}
+  Creature_1Name: {fileID: 1857884160}
+  Ai_Name: {fileID: 241409248}
+  Dialogue: {fileID: 1573971682}
+  Creature1CurrentHp: {fileID: 1957100651}
+  Creature3CurrentHp: {fileID: 1675785872}
+  HpSlider: {fileID: 0}
+  Player_1healCount: 0
+  Ai_healCount: 0
+  Player_1SpecialUse: 0
+  Ai_SpecialUse: 0
+--- !u!4 &744083602
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744083600}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 528.17633, y: 249.55359, z: -3.9862792}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &744083603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744083600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75154350b55c735408b83bd7ecaef5dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  networkShape: 03000000050000000500000004000000
+--- !u!114 &744083604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744083600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9599011e9cbc93b43871279f1b939edd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  states2: 0
+  Ai_Animal: {fileID: 4854358392108924926, guid: b10423c98dffebf429201b81054a6960, type: 3}
+  Animal: {fileID: 535581845806559606, guid: fd56c36f1adf2f64c9f47c1fafb37c6e, type: 3}
+  neuralNetwork: {fileID: 744083603}
 --- !u!1 &819650516
 GameObject:
   m_ObjectHideFlags: 0
@@ -1460,8 +1477,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 459278803}
-        m_TargetAssemblyTypeName: AI_manager, Assembly-CSharp
+      - m_Target: {fileID: 744083601}
+        m_TargetAssemblyTypeName: Hard_AI, Assembly-CSharp
         m_MethodName: Ai_Blocked
         m_Mode: 1
         m_Arguments:
@@ -1914,8 +1931,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 459278803}
-        m_TargetAssemblyTypeName: AI_manager, Assembly-CSharp
+      - m_Target: {fileID: 744083601}
+        m_TargetAssemblyTypeName: Hard_AI, Assembly-CSharp
         m_MethodName: OnAttackAi_Button
         m_Mode: 1
         m_Arguments:
@@ -2046,7 +2063,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1156585433
 GameObject:
@@ -2661,8 +2678,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 459278803}
-        m_TargetAssemblyTypeName: AI_manager, Assembly-CSharp
+      - m_Target: {fileID: 744083601}
+        m_TargetAssemblyTypeName: Hard_AI, Assembly-CSharp
         m_MethodName: Player_1Blocked
         m_Mode: 1
         m_Arguments:
@@ -2875,8 +2892,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 459278803}
-        m_TargetAssemblyTypeName: AI_manager, Assembly-CSharp
+      - m_Target: {fileID: 744083601}
+        m_TargetAssemblyTypeName: Hard_AI, Assembly-CSharp
         m_MethodName: Ai_2Special
         m_Mode: 1
         m_Arguments:
@@ -3329,8 +3346,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 459278803}
-        m_TargetAssemblyTypeName: AI_manager, Assembly-CSharp
+      - m_Target: {fileID: 744083601}
+        m_TargetAssemblyTypeName: Hard_AI, Assembly-CSharp
         m_MethodName: Ai_HealthRestored
         m_Mode: 1
         m_Arguments:

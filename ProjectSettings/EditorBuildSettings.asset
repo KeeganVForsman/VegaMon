@@ -65,4 +65,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AI_Selection.unity
     guid: e3ab133cd492e194a8ff8f8fb68eef62
+  - enabled: 1
+    path: Assets/Scenes/PvAI Neural.unity
+    guid: 2a3f1107ea9ec144c99803ec75426e41
+  - enabled: 1
+    path: Assets/Scenes/Difficulty_Select NN.unity
+    guid: 3d42519285ad01c4da75d4c25b0fa132
+  - enabled: 1
+    path: Assets/Scenes/PvAI hard NN.unity
+    guid: 1575e5eb26ce76f45a9a1a37c8155756
+  - enabled: 1
+    path: Assets/Scenes/PvAI Meduim NN.unity
+    guid: cdfb03ba1b61ec2489da4798f22a5f64
   m_configObjects: {}
